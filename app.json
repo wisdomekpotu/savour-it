@@ -3,6 +3,7 @@
     "name": "SavourIt",
     "slug": "savour-it",
     "privacy": "public",
+    "description": "A food delivery app that helps users identify what to eat",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -10,7 +11,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#DA0091"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
