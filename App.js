@@ -2,14 +2,68 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Budget from './screens/Budget';
-import Hungry from './screens/Hungry';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Feather, FontAwesome, MaterialIcons } from '@expo/vector-icons';
 
+//import screens
+import Budget from './screens/Budget';
+import Orders from './screens/Orders';
+import Search from './screens/Search';
+import Profile from './screens/Profile';
+
+//initialization
 const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
+
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator
+      <Tab.Navigator>
+        <Tab.Screen
+          name='Home'
+          component={Budget}
+          options={{
+            tabBarLabel: 'Budget',
+            tabBarIcon: ({ color, size }) => (
+              <FontAwesome name='cutlery' size={24} color='black' />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name='Search'
+          component={Search}
+          options={{
+            tabBarLabel: 'Search',
+            tabBarIcon: ({ color, size }) => (
+              <FontAwesome name='search' size={24} color='black' />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name='Orders'
+          component={Orders}
+          options={{
+            tabBarLabel: 'Orders',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialIcons name='bookmark-border' size={24} color='black' />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name='Profile'
+          component={Profile}
+          options={{
+            tabBarLabel: 'Profile',
+            tabBarIcon: ({ color, size }) => (
+              <Feather name='user' size={24} color='black' />
+            ),
+          }}
+        />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+
+  /* <Stack.Navigator
         screenOptions={{
           title: 'Savour It',
           headerStatusBarHeight: 80,
@@ -37,10 +91,9 @@ export default function App() {
         }}
       >
         <Stack.Screen name='Budget' component={Budget} />
-        <Stack.Screen name='Hungry' component={Hungry} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+        <Stack.Screen name='Hungry' component={Hungry} /> 
+
+      </Stack.Navigator> */
 }
 
 const styles = StyleSheet.create({});
