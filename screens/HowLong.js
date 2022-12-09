@@ -1,41 +1,34 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
+import Curating from './Curating';
 
-export default function Budget({ navigation }) {
+export default function HowLong({ navigation }) {
   return (
     <View>
-      <Text style={styles.text}>Do you have a</Text>
-      <Text>Budget</Text>
+      <Text style={styles.text}>How long can you wait?</Text>
+
       <View>
         <Pressable
           style={styles.first_press}
-          onPress={() => navigation.navigate('HowHungry')}
+          onPress={() => navigation.navigate('Curating')}
         >
-          <Text style={styles.button_text}>$10 - $20</Text>
+          <Text style={styles.button_text}>5-15</Text>
         </Pressable>
       </View>
       <View style={styles.second_btn}>
         <Pressable
           style={styles.button}
-          onPress={() => navigation.navigate('HowHungry')}
+          onPress={() => navigation.navigate('Curating')}
         >
-          <Text style={styles.button_text}>$20 - $30</Text>
+          <Text style={styles.button_text}>15-25</Text>
         </Pressable>
       </View>
       <View style={styles.third_btn}>
         <Pressable
           style={styles.button}
-          onPress={() => navigation.navigate('HowHungry')}
+          onPress={() => navigation.navigate('Curating')}
         >
-          <Text style={styles.button_text}>$30 - $70</Text>
-        </Pressable>
-      </View>
-      <View style={styles.fourth_btn}>
-        <Pressable
-          style={styles.button}
-          onPress={() => navigation.navigate('HowHungry')}
-        >
-          <Text style={styles.button_text}>___________</Text>
+          <Text style={styles.button_text}>25-30</Text>
         </Pressable>
       </View>
     </View>

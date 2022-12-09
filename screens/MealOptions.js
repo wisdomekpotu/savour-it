@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 
-export default function Hungry() {
+export default function MealOptions() {
   return (
     <View>
-      <Text>Hungry</Text>
+      <Text>MealOptions</Text>
     </View>
   );
 }
