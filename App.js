@@ -84,7 +84,11 @@ function Otherscreens() {
         options={{ headerShown: false }}
       />
       <Stack.Screen name='Curating' component={Curating} />
-      <Stack.Screen name='FancyHaving' component={FancyHaving} />
+      <Stack.Screen
+        name='FancyHaving'
+        component={FancyHaving}
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
 }
