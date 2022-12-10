@@ -9,11 +9,11 @@ export default function HowLong({ navigation }) {
 
       <View>
         <Pressable
-          style={styles.first_press}
+          style={styles.button}
           onPress={() => navigation.navigate('Curating')}
         >
           <Text style={styles.button_text}>
-            <Octicons name='clock' size={20} color='white' /> 5-15
+            <Octicons name='clock' size={20} color='white' /> 5-15 mins
           </Text>
         </Pressable>
       </View>
@@ -23,7 +23,7 @@ export default function HowLong({ navigation }) {
           onPress={() => navigation.navigate('Curating')}
         >
           <Text style={styles.button_text}>
-            <Octicons name='clock' size={20} color='white' /> 15-25
+            <Octicons name='clock' size={20} color='white' /> 15-25 mins
           </Text>
         </Pressable>
       </View>
@@ -33,7 +33,7 @@ export default function HowLong({ navigation }) {
           onPress={() => navigation.navigate('Curating')}
         >
           <Text style={styles.button_text}>
-            <Octicons name='clock' size={20} color='white' /> 25-30
+            <Octicons name='clock' size={20} color='white' /> 25-30 mins
           </Text>
         </Pressable>
       </View>
@@ -44,11 +44,11 @@ export default function HowLong({ navigation }) {
 const styles = StyleSheet.create({
   second_btn: {
     top: 81,
-    backgroundColor: '#E7A6D1',
   },
 
   third_btn: {
     top: 162,
+    backgroundColor: '#E7A6D1',
   },
 
   fourth_btn: {
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     width: 273,
     height: 64,
     left: 60,
-    top: 98,
+    top: 48,
     fontfamily: 'Clash Display',
     fontStyle: 'normal',
     fontWeight: '600',
@@ -78,12 +78,13 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
     paddingLeft: 50,
     paddingRight: 50,
+
     gap: 10,
     position: 'absolute',
-    width: 182,
+
     height: 64,
-    left: 105,
-    top: 307,
+    left: 95,
+    top: 240,
     backgroundColor: '#E7A6D1',
     borderRadius: 80,
   },
@@ -105,8 +106,6 @@ const styles = StyleSheet.create({
     borderRadius: 80,
   },
   button_text: {
-    width: 82,
-    height: 24,
     fontStyle: 'normal',
     fontWeight: '800',
     fontSize: 20,

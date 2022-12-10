@@ -1,9 +1,9 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 import React from 'react';
 
-export default function Curating() {
+export default function Curating({ navigation }) {
   return (
     <View
       style={{
@@ -11,9 +11,14 @@ export default function Curating() {
         backgroundColor: '#DA0091',
       }}
     >
-      <Image style={styles.logo} source={require('../assets/Group.png')} />
-      <Text style={styles.text}>Curating meal options for you...</Text>
-      <Image style={styles.img} source={require('../assets/Vector.png')} />
+      <Pressable
+        style={styles.press2}
+        onPress={() => navigation.navigate('MealOptions')}
+      >
+        {/* <Image style={styles.logo} source={require('../assets/Group.png')} /> */}
+        <Text style={styles.text}>Curating meal options {'\n'} for you...</Text>
+        <Image style={styles.img} source={require('../assets/Vector.png')} />
+      </Pressable>
     </View>
   );
 }

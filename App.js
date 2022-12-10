@@ -34,6 +34,7 @@ function Otherscreens() {
         name='MealOptions'
         component={MealOptions}
         options={{
+          headerShown: false,
           title: 'Savour it',
           headerTitleStyle: {
             color: 'white',
@@ -80,8 +81,16 @@ function Otherscreens() {
           headerStyle: { backgroundColor: '#DA0091' },
         }}
       />
-      <Stack.Screen name='OrderDetails' component={OrderDetails} />
-      <Stack.Screen name='Final' component={Final} />
+      <Stack.Screen
+        name='OrderDetails'
+        component={OrderDetails}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name='Final'
+        component={Final}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         name='Avoiding'
         component={Avoiding}
