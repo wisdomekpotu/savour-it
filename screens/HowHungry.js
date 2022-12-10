@@ -9,11 +9,23 @@ export default function HowHungry({ navigation }) {
       <Text style={styles.text1}>Very hungry</Text>
       <Text style={styles.text2}>Not very hungry</Text>
       <Text style={styles.text3}>Not hungry</Text>
-      <View style={styles.button}>
-        <Pressable onPress={() => navigation.navigate('Avoiding')}>
-          <Text style={styles.btn_text}>Continue</Text>
-        </Pressable>
-      </View>
+      <Pressable onPress={() => navigation.navigate('Avoiding')}>
+        <View style={styles.button}>
+          <Text
+            style={{
+              color: 'white',
+              width: 75,
+              height: 22,
+              fontStyle: 'normal',
+              fontWeight: '600',
+              fontSize: 18,
+              lineHeight: 22,
+            }}
+          >
+            Continue
+          </Text>
+        </View>
+      </Pressable>
     </View>
   );
 }

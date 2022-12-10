@@ -18,14 +18,9 @@ import Search from './screens/Search';
 import Profile from './screens/Profile';
 import Curating from './screens/Curating';
 import HowLong from './screens/HowLong';
+import FancyHaving from './screens/FancyHaving';
 
 const Tab = createBottomTabNavigator();
-
-// function Home() {
-//   return (
-
-//   );
-// }
 
 function Otherscreens() {
   return (
@@ -83,8 +78,13 @@ function Otherscreens() {
       />
       <Stack.Screen name='OrderDetails' component={OrderDetails} />
       <Stack.Screen name='Final' component={Final} />
-      <Stack.Screen name='Avoiding' component={Avoiding} />
+      <Stack.Screen
+        name='Avoiding'
+        component={Avoiding}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen name='Curating' component={Curating} />
+      <Stack.Screen name='FancyHaving' component={FancyHaving} />
     </Stack.Navigator>
   );
 }
