@@ -4,8 +4,8 @@ import React from 'react';
 export default function Budget({ navigation }) {
   return (
     <View>
-      <Text style={styles.text}>Do you have a</Text>
-      <Text>Budget</Text>
+      <Text style={styles.text}>Do you have a {'\n'}Budget?</Text>
+
       <View>
         <Pressable
           style={styles.first_press}
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     height: 64,
     left: 60,
     top: 98,
-    fontfamily: 'Clash Display',
+    fontfamily: 'Clash',
     fontStyle: 'normal',
     fontWeight: '600',
     fontSize: 35,
