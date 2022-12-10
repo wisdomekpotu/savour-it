@@ -26,7 +26,6 @@ function Home() {
       <Tab.Screen
         name='Budget'
         component={Budget}
-        ß
         options={{
           title: 'Savour it',
           headerTitleStyle: {

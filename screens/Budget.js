@@ -4,39 +4,44 @@ import React from 'react';
 export default function Budget({ navigation }) {
   return (
     <View>
-      <Text style={styles.text}>Do you have a {'\n'}Budget?</Text>
-
-      <View>
-        <Pressable
-          style={styles.first_press}
-          onPress={() => navigation.navigate('HowHungry')}
-        >
-          <Text style={styles.button_text}>$10 - $20</Text>
-        </Pressable>
-      </View>
-      <View style={styles.second_btn}>
-        <Pressable
-          style={styles.button}
-          onPress={() => navigation.navigate('HowHungry')}
-        >
-          <Text style={styles.button_text}>$20 - $30</Text>
-        </Pressable>
-      </View>
-      <View style={styles.third_btn}>
-        <Pressable
-          style={styles.button}
-          onPress={() => navigation.navigate('HowHungry')}
-        >
-          <Text style={styles.button_text}>$30 - $70</Text>
-        </Pressable>
-      </View>
-      <View style={styles.fourth_btn}>
-        <Pressable
-          style={styles.button}
-          onPress={() => navigation.navigate('HowHungry')}
-        >
-          <Text style={styles.button_text}>___________</Text>
-        </Pressable>
+      <Text style={styles.text}>Do you have a {'\n'}budget?</Text>
+      <View
+        style={{
+          top: 133,
+        }}
+      >
+        <View>
+          <Pressable
+            style={styles.first_press}
+            onPress={() => navigation.navigate('HowHungry')}
+          >
+            <Text style={styles.button_text}>$10 - $20</Text>
+          </Pressable>
+        </View>
+        <View style={styles.second_btn}>
+          <Pressable
+            style={styles.button}
+            onPress={() => navigation.navigate('HowHungry')}
+          >
+            <Text style={styles.button_text}>$20 - $30</Text>
+          </Pressable>
+        </View>
+        <View style={styles.third_btn}>
+          <Pressable
+            style={styles.button}
+            onPress={() => navigation.navigate('HowHungry')}
+          >
+            <Text style={styles.button_text}>$30 - $70</Text>
+          </Pressable>
+        </View>
+        <View style={styles.fourth_btn}>
+          <Pressable
+            style={styles.button}
+            onPress={() => navigation.navigate('HowHungry')}
+          >
+            <Text style={styles.button_text}>___________</Text>
+          </Pressable>
+        </View>
       </View>
     </View>
   );
@@ -84,7 +89,7 @@ const styles = StyleSheet.create({
     width: 182,
     height: 64,
     left: 105,
-    top: 307,
+    top: 107,
     backgroundColor: '#E7A6D1',
     borderRadius: 80,
   },
@@ -101,7 +106,7 @@ const styles = StyleSheet.create({
     width: 182,
     height: 64,
     left: 105,
-    top: 307,
+    top: 107,
     backgroundColor: '#DA0091',
     borderRadius: 80,
   },
