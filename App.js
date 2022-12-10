@@ -52,7 +52,11 @@ function Otherscreens() {
           headerStyle: { backgroundColor: '#DA0091' },
         }}
       />
-      <Stack.Screen name='HowLong' component={HowLong} />
+      <Stack.Screen
+        name='HowLong'
+        component={HowLong}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         name='HowHungry'
         component={HowHungry}
@@ -83,7 +87,11 @@ function Otherscreens() {
         component={Avoiding}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name='Curating' component={Curating} />
+      <Stack.Screen
+        name='Curating'
+        component={Curating}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         name='FancyHaving'
         component={FancyHaving}

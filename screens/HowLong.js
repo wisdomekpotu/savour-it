@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import Curating from './Curating';
+import { Octicons } from '@expo/vector-icons';
 
 export default function HowLong({ navigation }) {
   return (
@@ -12,7 +12,9 @@ export default function HowLong({ navigation }) {
           style={styles.first_press}
           onPress={() => navigation.navigate('Curating')}
         >
-          <Text style={styles.button_text}>5-15</Text>
+          <Text style={styles.button_text}>
+            <Octicons name='clock' size={20} color='white' /> 5-15
+          </Text>
         </Pressable>
       </View>
       <View style={styles.second_btn}>
@@ -20,7 +22,9 @@ export default function HowLong({ navigation }) {
           style={styles.button}
           onPress={() => navigation.navigate('Curating')}
         >
-          <Text style={styles.button_text}>15-25</Text>
+          <Text style={styles.button_text}>
+            <Octicons name='clock' size={20} color='white' /> 15-25
+          </Text>
         </Pressable>
       </View>
       <View style={styles.third_btn}>
@@ -28,7 +32,9 @@ export default function HowLong({ navigation }) {
           style={styles.button}
           onPress={() => navigation.navigate('Curating')}
         >
-          <Text style={styles.button_text}>25-30</Text>
+          <Text style={styles.button_text}>
+            <Octicons name='clock' size={20} color='white' /> 25-30
+          </Text>
         </Pressable>
       </View>
     </View>
