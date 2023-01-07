@@ -1,4 +1,5 @@
 import React from 'react';
+import Curating from './Curating';
 import {
   View,
   Text,
@@ -6,11 +7,10 @@ import {
   TouchableOpacity,
   Pressable,
 } from 'react-native';
-import Btn from '../components/Btn';
 
 import config from '../config';
 
-export default function App() {
+export default function App({ navigation }) {
   return (
     <View
       style={{
@@ -102,6 +102,7 @@ export default function App() {
         }}
       >
         <Pressable
+          onPress={() => navigation.navigate('Curating')}
           style={{
             backgroundColor: '#1B463C',
             alignItems: 'center',

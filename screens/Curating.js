@@ -1,55 +1,38 @@
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-
+import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
+import Lottie from 'lottie-react-native';
 import React from 'react';
+import config from '../config';
 
 export default function Curating({ navigation }) {
   return (
     <View
       style={{
-        height: '100%',
-        backgroundColor: '#DA0091',
+        flex: 1,
+        backgroundColor: '#1B463C',
       }}
     >
-      <Pressable
-        style={styles.press2}
-        onPress={() => navigation.navigate('MealOptions')}
+      <Lottie
+        style={{
+          width: config.deviceWidth - 60,
+          alignSelf: 'center',
+          marginTop: config.deviceHeight / 16,
+        }}
+        source={require('../animations/meal_loading.json')}
+        autoPlay
+        loop
+      />
+      <Text
+        style={{
+          marginTop: config.deviceHeight / 6,
+          justifyContent: 'flex-start',
+          fontSize: RFPercentage(3),
+          color: 'white',
+          alignSelf: 'center',
+        }}
       >
-        {/* <Image style={styles.logo} source={require('../assets/Group.png')} /> */}
-        <Text style={styles.text}>Curating meal options {'\n'} for you...</Text>
-        <Image style={styles.img} source={require('../assets/Vector.png')} />
-      </Pressable>
+        Curating meal options {'\n'} for you...
+      </Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  text: {
-    textAlign: 'center',
-    width: 310,
-    height: 68,
-    left: 41,
-    top: 218,
-    fontStyle: 'normal',
-    fontWeight: '600',
-    fontSize: 28,
-    lineHeight: 34,
-    color: 'white',
-    backgroundColor: '#DA0091',
-    position: 'absolute',
-  },
-
-  img: {
-    textAlign: 'center',
-    left: 156,
-    top: 318,
-    position: 'absolute',
-  },
-
-  logo: {
-    textAlign: 'center',
-    left: 120,
-    top: 18,
-    position: 'absolute',
-  },
-});
