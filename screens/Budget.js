@@ -17,13 +17,14 @@ export default function App() {
         flex: 1,
         justifyContent: 'center',
         backgroundColor: '#F4F3E8',
-        paddingLeft: config.deviceWidth * 0.1,
       }}
     >
       <Text
         style={{
           justifyContent: 'flex-start',
           fontSize: 35,
+          color: '#1B463C',
+          paddingLeft: config.deviceWidth * 0.1,
         }}
       >
         Do you have a {'\n'}budget?
@@ -31,7 +32,8 @@ export default function App() {
       <View
         style={{
           width: config.deviceWidth - 60,
-          height: config.deviceHeight / 3,
+          paddingLeft: config.deviceWidth * 0.1,
+          height: config.deviceHeight / 2,
           justifyContent: 'flex-start',
           alignItems: 'left',
         }}
@@ -39,7 +41,7 @@ export default function App() {
         <Pressable
           style={{
             backgroundColor: '#D9E7E4',
-            marginTop: config.deviceHeight / 33,
+            marginTop: config.deviceHeight / 16,
             alignItems: 'center',
             width: '40%',
             height: 40,
@@ -48,7 +50,7 @@ export default function App() {
             marginBottom: config.deviceHeight / 33,
           }}
         >
-          <Text style={{ color: '#1B463C' }}>Continue</Text>
+          <Text style={{ color: '#1B463C' }}>$8 - $15</Text>
         </Pressable>
 
         <Pressable
@@ -62,7 +64,7 @@ export default function App() {
             marginBottom: config.deviceHeight / 33,
           }}
         >
-          <Text style={{ color: '#1B463C' }}>Continue</Text>
+          <Text style={{ color: '#1B463C' }}>$15 - $25</Text>
         </Pressable>
         <Pressable
           style={{
@@ -76,7 +78,7 @@ export default function App() {
             marginBottom: config.deviceHeight / 33,
           }}
         >
-          <Text>Continue</Text>
+          <Text>$25 - $35</Text>
         </Pressable>
         <Pressable
           style={{
@@ -90,24 +92,29 @@ export default function App() {
             marginBottom: config.deviceHeight / 33,
           }}
         >
-          <Text>Continue</Text>
+          <Text>$35 - $45</Text>
         </Pressable>
       </View>
 
-      <View style={{ alignItems: 'center' }}></View>
-      <Pressable
+      <View
         style={{
-          backgroundColor: '#1B463C',
           alignItems: 'center',
-          color: '#FFFFFF',
-          width: '60%',
-          height: 40,
-          justifyContent: 'center',
-          borderRadius: 25,
         }}
       >
-        <Text style={{ color: '#FFFFFF' }}>Continue</Text>
-      </Pressable>
+        <Pressable
+          style={{
+            backgroundColor: '#1B463C',
+            alignItems: 'center',
+            color: '#FFFFFF',
+            width: '80%',
+            height: 50,
+            justifyContent: 'center',
+            borderRadius: 25,
+          }}
+        >
+          <Text style={{ color: '#FFFFFF' }}>Continue</Text>
+        </Pressable>
+      </View>
     </View>
   );
 }
