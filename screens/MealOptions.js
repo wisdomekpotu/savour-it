@@ -37,48 +37,7 @@ export default function MealOptions({ navigation }) {
       </Text>
       <Pressable
         style={styles.press2}
-        onPress={() => navigation.navigate('Final')}
-      >
-        <Image
-          style={{
-            position: 'absolute',
-            marginLeft: config.deviceWidth * 0.1,
-            top: 26,
-            bottom: 34.4,
-          }}
-          source={require('../assets/BG1.png')}
-        />
-        <View>
-          <Text
-            style={{
-              position: 'absolute',
-              height: 24,
-              paddingLeft: config.deviceWidth * 0.1,
-              fontWeight: '500',
-              top: 220,
-              fontSize: 17,
-              lineHeight: 24,
-              letterSpacing: 0.444444,
-              color: ' #010F07',
-            }}
-          >
-            Vegetarian salad
-          </Text>
-          <Text
-            style={{
-              marginTop: config.deviceHeight / 3.6,
-              opacity: 0.64,
-              marginLeft: config.deviceWidth * 0.1,
-              fontSize: 16,
-            }}
-          >
-            $$ * Regular * Halal
-          </Text>
-        </View>
-      </Pressable>
-      <Pressable
-        style={styles.press2}
-        onPress={() => navigation.navigate('Final')}
+        onPress={() => navigation.navigate('OrderDetails')}
       >
         <Image
           style={{
@@ -160,7 +119,48 @@ export default function MealOptions({ navigation }) {
       </Pressable>
       <Pressable
         style={styles.press2}
-        onPress={() => navigation.navigate('Final')}
+        onPress={() => navigation.navigate('OrderDetails')}
+      >
+        <Image
+          style={{
+            position: 'absolute',
+            marginLeft: config.deviceWidth * 0.1,
+            top: 26,
+            bottom: 34.4,
+          }}
+          source={require('../assets/BG1.png')}
+        />
+        <View>
+          <Text
+            style={{
+              position: 'absolute',
+              height: 24,
+              paddingLeft: config.deviceWidth * 0.1,
+              fontWeight: '500',
+              top: 220,
+              fontSize: 17,
+              lineHeight: 24,
+              letterSpacing: 0.444444,
+              color: ' #010F07',
+            }}
+          >
+            Vegetarian salad
+          </Text>
+          <Text
+            style={{
+              marginTop: config.deviceHeight / 3.6,
+              opacity: 0.64,
+              marginLeft: config.deviceWidth * 0.1,
+              fontSize: 16,
+            }}
+          >
+            $$ * Regular * Halal
+          </Text>
+        </View>
+      </Pressable>
+      <Pressable
+        style={styles.press2}
+        onPress={() => navigation.navigate('OrderDetails')}
       >
         <Image
           style={{
