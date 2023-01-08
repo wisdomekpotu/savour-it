@@ -1,9 +1,7 @@
 import 'react-native-gesture-handler';
-import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Feather, FontAwesome, MaterialIcons } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
 
 //import screens
@@ -13,15 +11,11 @@ import Avoiding from './screens/Avoiding';
 import HowHungry from './screens/HowHungry';
 import MealOptions from './screens/MealOptions';
 import OrderDetails from './screens/OrderDetails';
-import Orders from './screens/Orders';
-import Search from './screens/Search';
-import Profile from './screens/Profile';
 import Curating from './screens/Curating';
 import HowLong from './screens/HowLong';
 import FancyHaving from './screens/FancyHaving';
 
-const Tab = createBottomTabNavigator();
-
+// const Tab = createBottomTabNavigator();
 // function Otherscreens() {
 //   return (
 //     <Stack.Navigator>
@@ -111,44 +105,21 @@ const Tab = createBottomTabNavigator();
 // }
 const Stack = createNativeStackNavigator();
 export default function App() {
-  const [loaded] = useFonts({
-    Lactosa: require('./assets/fonts/Lactosa.ttf'),
-    Clash: require('./assets/fonts/ClashDisplay.otf'),
-  });
-
-  if (!loaded) {
-    return null;
-  }
-
   return (
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name='Home'
-          component={Budget}
-          options={{ headerShown: false }}
+          name='HowHungry'
+          component={HowHungry}
+          options={{
+            headerShown: false,
+          }}
         />
         <Stack.Screen
           name='MealOptions'
           component={MealOptions}
           options={{
             headerShown: false,
-            title: 'Savour it',
-            headerTitleStyle: {
-              color: 'white',
-              position: 'absolute',
-              width: 91,
-              height: 78,
-              left: 140,
-              top: 10,
-              fontFamily: 'Lactosa',
-              fontStyle: 'normal',
-              color: '#FFFFFF',
-              border: '2.36364px solid #DA0091',
-              textShadow: '0px 2.36364px 0px rgba(218, 0, 145, 0.25)',
-              fontWeight: '400',
-            },
-            headerStyle: { backgroundColor: '#DA0091' },
           }}
         />
         <Stack.Screen
@@ -156,29 +127,13 @@ export default function App() {
           component={HowLong}
           options={{ headerShown: false }}
         />
-        {/* <Stack.Screen
-        name='HowHungry'
-        component={HowHungry}
-        options={{
-          headerShown: false,
-          title: 'Savour it',
-          headerTitleStyle: {
-            color: 'white',
-            position: 'absolute',
-            width: 91,
-            height: 78,
-            left: 140,
-            top: 10,
-            fontFamily: 'Lactosa',
-            fontStyle: 'normal',
-            color: '#FFFFFF',
-            border: '2.36364px solid #DA0091',
-            textShadow: '0px 2.36364px 0px rgba(218, 0, 145, 0.25)',
-            fontWeight: '400',
-          },
-          headerStyle: { backgroundColor: '#DA0091' },
-        }}
-      /> */}
+        <Stack.Screen
+          name='Bugdet'
+          component={Budget}
+          options={{
+            headerShown: false,
+          }}
+        />
         <Stack.Screen
           name='OrderDetails'
           component={OrderDetails}
@@ -254,5 +209,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({});

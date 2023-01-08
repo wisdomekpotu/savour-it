@@ -1,109 +1,107 @@
-import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
+import {
+  View,
+  Text,
+  Dimensions,
+  TouchableOpacity,
+  Pressable,
+} from 'react-native';
 
-export default function HowHungry({ navigation }) {
+import config from '../config';
+
+export default function App({ navigation }) {
   return (
-    <View>
-      <Text style={styles.text}>How hungry are{'\n'}you?</Text>
-      <Image style={styles.img} source={require('../assets/slider.png')} />
-      <Text style={styles.text1}>Very hungry</Text>
-      <Text style={styles.text2}>Not very hungry</Text>
-      <Text style={styles.text3}>Not hungry</Text>
-      <Pressable onPress={() => navigation.navigate('Avoiding')}>
-        <View style={styles.button}>
-          <Text
-            style={{
-              color: 'white',
-              width: 75,
-              height: 22,
-              fontStyle: 'normal',
-              fontWeight: '600',
-              fontSize: 18,
-              lineHeight: 22,
-            }}
-          >
-            Continue
-          </Text>
-        </View>
-      </Pressable>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        backgroundColor: '#F4F3E8',
+      }}
+    >
+      <Text
+        style={{
+          justifyContent: 'flex-start',
+          fontSize: 35,
+          color: '#1B463C',
+          paddingLeft: config.deviceWidth * 0.1,
+        }}
+      >
+        How hungry are {'\n'}you?
+      </Text>
+      <View
+        style={{
+          width: config.deviceWidth - 60,
+          paddingLeft: config.deviceWidth * 0.1,
+          height: config.deviceHeight / 2,
+          justifyContent: 'flex-start',
+          alignItems: 'left',
+        }}
+      >
+        <Pressable
+          style={{
+            backgroundColor: '#D9E7E4',
+            marginTop: config.deviceHeight / 16,
+            alignItems: 'center',
+            width: '40%',
+            height: 40,
+            justifyContent: 'center',
+            borderRadius: 25,
+            marginBottom: config.deviceHeight / 33,
+          }}
+        >
+          <Text style={{ color: '#1B463C' }}>Very Hungry</Text>
+        </Pressable>
+
+        <Pressable
+          style={{
+            backgroundColor: '#D9E7E4',
+            alignItems: 'center',
+            width: '50%',
+            height: 40,
+            justifyContent: 'center',
+            borderRadius: 25,
+            marginBottom: config.deviceHeight / 33,
+          }}
+        >
+          <Text style={{ color: '#1B463C' }}>Not very hungry</Text>
+        </Pressable>
+
+        <Pressable
+          style={{
+            backgroundColor: '#D9E7E4',
+            alignItems: 'center',
+            color: '#FFFFFF',
+            width: '40%',
+            height: 40,
+            justifyContent: 'center',
+            borderRadius: 25,
+            marginBottom: config.deviceHeight / 33,
+          }}
+        >
+          <Text>Hungry</Text>
+        </Pressable>
+      </View>
+
+      <View
+        style={{
+          alignItems: 'center',
+        }}
+      >
+        <Pressable
+          onPress={() => navigation.navigate('Avoiding')}
+          style={{
+            backgroundColor: '#1B463C',
+            alignItems: 'center',
+            color: '#FFFFFF',
+            width: '80%',
+            height: 50,
+            justifyContent: 'center',
+            borderRadius: 25,
+          }}
+        >
+          <Text style={{ color: '#FFFFFF' }}>Continue</Text>
+        </Pressable>
+      </View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  text1: {
-    position: 'absolute',
-    width: 119,
-    height: 26,
-    left: 159,
-    top: 214,
-    fontStyle: 'normal',
-    fontWeight: '800',
-    fontSize: 22,
-    lineHeight: 26,
-    letterSpacing: -0.03,
-    color: '#DA0091',
-  },
-
-  text2: {
-    position: 'absolute',
-    width: 122,
-    height: 20,
-    left: 159,
-    top: 353,
-    fontStyle: 'normal',
-    fontWeight: '700',
-    fontSize: 17,
-    lineHeight: 20,
-    letterSpacing: -0.03,
-    color: '#DA0091',
-  },
-
-  text3: {
-    position: 'absolute',
-    width: 69,
-    height: 17,
-    left: 159,
-    top: 500,
-    fontStyle: 'normal',
-    fontWeight: '500',
-    fontSize: 14,
-    lineHeight: 17,
-    letterSpacing: -0.03,
-    color: '#DA0091',
-  },
-  img: { position: 'absolute', left: 80, top: 210 },
-
-  text: {
-    color: '#4D0033',
-    position: 'absolute',
-    width: 273,
-    height: 64,
-    left: 60,
-    top: 45,
-    fontfamily: 'Clash',
-    fontStyle: 'normal',
-    fontWeight: '600',
-    fontSize: 28,
-    lineHeight: 40,
-    textAlign: 'center',
-    color: '#4D0033',
-  },
-  button: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignitems: 'center',
-    paddingTop: 20,
-    paddingBottom: 0,
-    gap: 8,
-    position: 'absolute',
-    width: 329,
-    height: 62,
-    left: 32,
-    top: 600,
-    color: 'white',
-    backgroundColor: '#B9B9B9',
-    borderRadius: 89,
-  },
-});

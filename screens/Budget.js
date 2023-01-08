@@ -102,7 +102,7 @@ export default function App({ navigation }) {
         }}
       >
         <Pressable
-          onPress={() => navigation.navigate('Curating')}
+          onPress={() => navigation.navigate('')}
           style={{
             backgroundColor: '#1B463C',
             alignItems: 'center',
