@@ -2,6 +2,7 @@
   "expo": {
     "name": "SavourIt",
     "slug": "savour-it",
+    "owner": "wisdom-org",
     "privacy": "public",
     "description": "A food delivery app that helps users identify what to eat",
     "version": "1.0.0",

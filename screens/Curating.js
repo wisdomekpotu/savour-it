@@ -22,17 +22,20 @@ export default function Curating({ navigation }) {
       }}
     >
       <Ionicons name='md-arrow-back-circle-outline' size={24} color='white' />
-      <Lottie
-        style={{
-          width: config.deviceWidth - 60,
-          alignSelf: 'center',
+      <Pressable onPress={() => navigation.navigate('MealOptions')}>
+        <Lottie
+          style={{
+            width: config.deviceWidth - 60,
+            alignSelf: 'center',
 
-          marginTop: config.deviceHeight / 16,
-        }}
-        source={require('../animations/meal_loading.json')}
-        autoPlay
-        loop
-      />
+            marginTop: config.deviceHeight / 16,
+          }}
+          source={require('../animations/meal_loading.json')}
+          autoPlay
+          loop
+        />
+      </Pressable>
+
       <Text
         style={{
           marginTop: config.deviceHeight / 6,

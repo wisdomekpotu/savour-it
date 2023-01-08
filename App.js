@@ -128,7 +128,7 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name='Bugdet'
+          name='Budget'
           component={Budget}
           options={{
             headerShown: false,

@@ -1,63 +1,78 @@
-import { Pressable, StyleSheet, Text, View, Image } from 'react-native';
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  ScrollView,
+} from 'react-native';
 import React from 'react';
+import config from '../config';
 
 export default function MealOptions({ navigation }) {
   return (
-    <View>
+    <ScrollView
+      style={{
+        flex: 1,
+
+        backgroundColor: '#F4F3E8',
+      }}
+    >
+      <Image
+        style={{
+          position: 'absolute',
+          left: 28,
+          marginTop: config.deviceHeight / 9,
+          marginLeft: config.deviceWidth * 0.3,
+        }}
+        source={require('../assets/Savourit.png')}
+      />
+      <Text
+        style={{
+          fontSize: 20,
+          color: '#1B463C',
+          marginTop: config.deviceHeight / 5,
+          paddingLeft: config.deviceWidth * 0.1,
+        }}
+      >
+        Here are some meal{'\n'} options for you
+      </Text>
       <Pressable
         style={styles.press2}
         onPress={() => navigation.navigate('Final')}
       >
-        <Text style={styles.text}>
-          Here are some meal {'\n'} options for you
-        </Text>
-        <Image style={styles.img1} source={require('../assets/BG1.png')} />
-        <Text style={styles.title}>Vegetarian salad</Text>
-        {/* <Text>MealOptions</Text>
-        <Text>MealOptions</Text> */}
-        <Image style={styles.img2} source={require('../assets/BG2.png')} />
-        <Text style={styles.title2}>Cookie Sandwich</Text>
-        {/* <Text>MealOptions</Text>
-        <Text>MealOptions</Text>  */}
+        <Image
+          style={{
+            position: 'absolute',
+            marginLeft: config.deviceWidth * 0.05,
+            top: 26,
+            bottom: 34.4,
+          }}
+          source={require('../assets/BG1.png')}
+        />
+        <View style={{ backgroundColor: '#FFFFFF' }}>
+          <Text
+            style={{
+              position: 'absolute',
+              height: 24,
+              paddingLeft: config.deviceWidth * 0.1,
+              fontWeight: '500',
+              top: 220,
+              fontSize: 17,
+              lineHeight: 24,
+              letterSpacing: 0.444444,
+              color: ' #010F07',
+            }}
+          >
+            Vegetarian salad
+          </Text>
+        </View>
       </Pressable>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  title: {
-    position: 'absolute',
-    height: 24,
-    right: 230,
-    fontStyle: 'normal',
-    fontWeight: '500',
-    top: 320,
-    fontSize: 20,
-    lineHeight: 24,
-    letterSpacing: 0.444444,
-    color: '#010F07',
-  },
-  title2: {
-    position: 'absolute',
-    height: 24,
-    right: 230,
-    fontStyle: 'normal',
-    fontWeight: '500',
-    top: 620,
-    fontSize: 20,
-    lineHeight: 24,
-    letterSpacing: 0.444444,
-    color: '#010F07',
-  },
-  img1: {
-    position: 'absolute',
-
-    left: 28,
-    right: 0,
-    top: 120,
-    bottom: 34.4,
-    borderRadius: 12,
-  },
   img2: {
     position: 'absolute',
     left: 28,
