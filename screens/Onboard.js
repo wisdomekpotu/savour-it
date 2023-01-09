@@ -1,4 +1,4 @@
-import { View, Text, Image } from 'react-native';
+import { Image } from 'react-native';
 import Onboarding from 'react-native-onboarding-swiper';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
@@ -9,6 +9,7 @@ export default function Onboard() {
   return (
     <Onboarding
       onSkip={() => navigation.replace('Ordermeal')}
+      onDone={() => navigation.replace('Ordermeal')}
       pages={[
         {
           backgroundColor: '#F4F3E8',
