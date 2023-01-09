@@ -54,6 +54,7 @@ export default function MealOptions({ navigation }) {
               position: 'absolute',
               height: 24,
               paddingLeft: config.deviceWidth * 0.1,
+
               fontWeight: '500',
               top: 220,
               fontSize: 17,
@@ -84,6 +85,7 @@ export default function MealOptions({ navigation }) {
           style={{
             position: 'absolute',
             marginLeft: config.deviceWidth * 0.1,
+
             top: 26,
             bottom: 34.4,
           }}

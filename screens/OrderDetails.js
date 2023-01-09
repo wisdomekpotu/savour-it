@@ -5,14 +5,14 @@ import {
   StyleSheet,
   Text,
   View,
+  ScrollView,
 } from 'react-native';
 import React from 'react';
 import config from '../config';
-import { ScrollView } from 'react-native-gesture-handler';
 
 export default function FancyHaving({ navigation }) {
   return (
-    <View
+    <ScrollView
       style={{
         flex: 1,
         alignContent: 'center',
@@ -27,7 +27,7 @@ export default function FancyHaving({ navigation }) {
           style={{
             position: 'absolute',
             width: '100%',
-            marginTop: config.deviceHeight / 12,
+            marginTop: config.deviceHeight / 30,
             top: 26,
             bottom: 34.4,
           }}
@@ -72,6 +72,41 @@ export default function FancyHaving({ navigation }) {
           </Text>
         </View>
       </Pressable>
+      <Pressable onPress={() => navigation.navigate('Budget')}>
+        <Text
+          style={{
+            position: 'absolute',
+            marginLeft: config.deviceWidth * 0.45,
+            marginTop: config.deviceHeight / 9,
+            fontWeight: '500',
+            fontSize: 15,
+            lineHeight: 26,
+            color: '#1B463C',
+          }}
+        >
+          Cookie Sandwish
+        </Text>
+        <Text
+          style={{
+            marginTop: config.deviceHeight / 6,
+            marginLeft: config.deviceWidth * 0.1,
+            opacity: 0.64,
+            fontSize: 13,
+          }}
+        >
+          Shortbread, chocolate turtle {'\n'}cookies, and red velvet.
+        </Text>
+        <Text
+          style={{
+            marginTop: config.deviceHeight / 60,
+            opacity: 0.64,
+            marginLeft: config.deviceWidth * 0.1,
+            fontSize: 16,
+          }}
+        >
+          $$ * Regular
+        </Text>
+      </Pressable>
       <View
         style={{
           alignItems: 'center',
@@ -87,12 +122,13 @@ export default function FancyHaving({ navigation }) {
             height: 50,
             justifyContent: 'center',
             borderRadius: 25,
+            marginTop: config.deviceHeight / 4,
           }}
         >
           <Text style={{ color: '#FFFFFF' }}>Continue to Uber Eats</Text>
         </Pressable>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
