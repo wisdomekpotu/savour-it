@@ -1,11 +1,4 @@
-import {
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  ScrollView,
-} from 'react-native';
+import { Pressable, StyleSheet, Text, Image, ScrollView } from 'react-native';
 import React from 'react';
 import config from '../config';
 
@@ -30,7 +23,6 @@ export default function MealOptions({ navigation }) {
         style={{
           fontSize: 20,
           color: '#1B463C',
-
           marginTop: config.deviceHeight / 5,
           paddingLeft: config.deviceWidth * 0.18,
         }}

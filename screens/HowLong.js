@@ -1,16 +1,9 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  Dimensions,
-  TouchableOpacity,
-  Pressable,
-} from 'react-native';
+import { View, Text, Pressable } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-
 import config from '../config';
 
-export default function App({ navigation }) {
+export default function HowLong({ navigation }) {
   return (
     <View
       style={{

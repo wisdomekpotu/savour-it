@@ -1,6 +1,5 @@
 import {
   Image,
-  FlatList,
   Pressable,
   StyleSheet,
   Text,

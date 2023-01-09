@@ -1,15 +1,9 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  Dimensions,
-  TouchableOpacity,
-  Pressable,
-} from 'react-native';
+import { View, Text, Pressable } from 'react-native';
 
 import config from '../config';
 
-export default function App({ navigation }) {
+export default function HowHungry({ navigation }) {
   return (
     <View
       style={{

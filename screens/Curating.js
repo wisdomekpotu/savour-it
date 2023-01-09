@@ -1,15 +1,6 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  Pressable,
-  Animated,
-  Easing,
-} from 'react-native';
+import { Text, View, Pressable } from 'react-native';
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
 import Lottie from 'lottie-react-native';
-import React, { useRef, useEffect, useState } from 'react';
 import config from '../config';
 import { Ionicons } from '@expo/vector-icons';
 

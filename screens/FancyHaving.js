@@ -1,11 +1,4 @@
-import {
-  Image,
-  FlatList,
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import { Image, Pressable, Text } from 'react-native';
 import React from 'react';
 import config from '../config';
 import { ScrollView } from 'react-native-gesture-handler';

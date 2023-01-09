@@ -1,16 +1,8 @@
 import React from 'react';
-import Curating from './Curating';
-import {
-  View,
-  Text,
-  Dimensions,
-  TouchableOpacity,
-  Pressable,
-} from 'react-native';
-
+import { View, Text, Pressable } from 'react-native';
 import config from '../config';
 
-export default function App({ navigation }) {
+export default function Budget({ navigation }) {
   return (
     <View
       style={{
@@ -52,7 +44,6 @@ export default function App({ navigation }) {
         >
           <Text style={{ color: '#1B463C' }}>$8 - $15</Text>
         </Pressable>
-
         <Pressable
           style={{
             backgroundColor: '#D9E7E4',
@@ -95,7 +86,6 @@ export default function App({ navigation }) {
           <Text>$35 - $45</Text>
         </Pressable>
       </View>
-
       <View
         style={{
           alignItems: 'center',
