@@ -1,33 +1,79 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  ScrollView,
+} from 'react-native';
 import React from 'react';
+import config from '../config';
 
-export default function Final() {
+export default function MealOptions({ navigation }) {
   return (
-    <View>
-      <Text style={styles.text}>Your meal is on the way!</Text>
-      <Image style={styles.img} source={require('../assets/check.png')} />
-    </View>
+    <ScrollView
+      style={{
+        flex: 1,
+        alignContent: 'center',
+        backgroundColor: '#F4F3E8',
+      }}
+    >
+      <Image
+        style={{
+          position: 'absolute',
+          marginTop: config.deviceHeight / 9,
+          marginLeft: config.deviceWidth * 0.4,
+        }}
+        source={require('../assets/Savourit.png')}
+      />
+      <Text
+        style={{
+          fontSize: 20,
+          color: '#1B463C',
+
+          marginTop: config.deviceHeight / 5,
+          paddingLeft: config.deviceWidth * 0.18,
+        }}
+      >
+        Your meal is being delivered by {'\n'} the selected delivery partner
+      </Text>
+      <Pressable
+        style={styles.press2}
+        onPress={() => navigation.navigate('OrderDetails')}
+      >
+        <Image
+          style={{
+            position: 'absolute',
+            marginTop: config.deviceHeight / 9,
+            marginLeft: config.deviceWidth * 0.16,
+          }}
+          source={require('../assets/final.png')}
+        />
+      </Pressable>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  img: {
-    textAlign: 'center',
-    left: 90,
-    top: 208,
+  img2: {
     position: 'absolute',
+    left: 28,
+    right: 0,
+    top: 420,
+    bottom: 34.4,
+    borderRadius: 12,
   },
   text: {
-    textAlign: 'center',
-    width: 310,
-    height: 68,
-    left: 41,
-    top: 118,
-    fontStyle: 'normal',
-    fontWeight: '600',
-    fontSize: 28,
-    lineHeight: 34,
-
     position: 'absolute',
+    width: 245,
+    height: 40,
+    left: 27,
+    top: 28,
+    fontStyle: 'normal',
+    fontWeight: '500',
+    fontSize: 21,
+    lineHeight: 22,
+    letterSpacing: -0.03,
+    color: '#000000',
   },
 });
