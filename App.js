@@ -9,10 +9,11 @@ import {
   Curating,
   Final,
   MealOptions,
-  Onboarding,
+  Onboard,
   OrderDetails,
   FancyHaving,
   HowLong,
+  Ordermeal,
   HowHungry,
 } from './screens';
 
@@ -23,8 +24,15 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name='Onboarding'
-          component={Onboarding}
+          name='Onboard'
+          component={Onboard}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name='Ordermeal'
+          component={Ordermeal}
           options={{
             headerShown: false,
           }}

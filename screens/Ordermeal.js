@@ -1,10 +1,12 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 
-export default function Onboarding() {
+const Ordermeal = () => {
   return (
     <View>
-      <Text>Onboarding</Text>
+      <Text>Ordermeal</Text>
     </View>
   );
-}
+};
+
+export default Ordermeal;
