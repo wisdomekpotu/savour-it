@@ -1,13 +1,7 @@
-import {
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-  ScrollView,
-  Image,
-} from 'react-native';
+import { Pressable, Text, View, ScrollView, Image } from 'react-native';
 import React from 'react';
 import config from '../config';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function Ordermeal({ navigation }) {
   return (
@@ -17,6 +11,7 @@ export default function Ordermeal({ navigation }) {
         backgroundColor: '#F4F3E8',
       }}
     >
+      <Ionicons name='md-arrow-back-circle-outline' size={24} color='white' />
       <Image
         style={{
           position: 'absolute',
@@ -27,7 +22,7 @@ export default function Ordermeal({ navigation }) {
       />
 
       <View>
-        <Pressable onPress={() => navigation.navigate('OrderDetails')}>
+        <Pressable>
           <Image
             style={{
               position: 'absolute',
@@ -60,7 +55,7 @@ export default function Ordermeal({ navigation }) {
 
       <View>
         <ScrollView horizontal>
-          <Pressable onPress={() => navigation.navigate('OrderDetails')}>
+          <Pressable>
             <Image
               style={{
                 position: 'absolute',
@@ -112,7 +107,7 @@ export default function Ordermeal({ navigation }) {
               </Text>
             </View>
           </Pressable>
-          <Pressable onPress={() => navigation.navigate('OrderDetails')}>
+          <Pressable>
             <Image
               style={{
                 position: 'absolute',
@@ -164,7 +159,7 @@ export default function Ordermeal({ navigation }) {
               </Text>
             </View>
           </Pressable>
-          <Pressable onPress={() => navigation.navigate('OrderDetails')}>
+          <Pressable>
             <Image
               style={{
                 position: 'absolute',
