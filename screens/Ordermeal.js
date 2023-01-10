@@ -20,7 +20,7 @@ export default function Ordermeal({ navigation }) {
       <Image
         style={{
           position: 'absolute',
-          marginTop: config.deviceHeight / 9,
+          marginTop: config.deviceHeight / 12,
           marginLeft: config.deviceWidth * 0.4,
         }}
         source={require('../assets/Savourit.png')}
@@ -31,28 +31,32 @@ export default function Ordermeal({ navigation }) {
           <Image
             style={{
               position: 'absolute',
-              marginLeft: config.deviceWidth * 0.1,
-              marginTop: config.deviceHeight / 7,
-              top: 26,
-              bottom: 34.4,
+              marginLeft: config.deviceWidth * 0.07,
+              marginTop: config.deviceHeight / 6.3,
+              width: config.deviceWidth * 0.86,
+              borderRadius: 12,
             }}
             source={require('../assets/ordermeal1.png')}
           />
         </Pressable>
       </View>
 
-      <Text
+      <View
         style={{
-          fontSize: 20,
-          color: '#010F07',
-          fontWeight: 'bold',
-          marginTop: config.deviceHeight / 2.5,
-          paddingLeft: config.deviceWidth * 0.1,
-          marginBottom: config.deviceHeight / 60,
+          marginTop: config.deviceHeight / 2.3,
+          paddingLeft: config.deviceWidth * 0.08,
         }}
       >
-        Featured Restaurants
-      </Text>
+        <Text
+          style={{
+            fontSize: 20,
+            color: '#010F07',
+            fontWeight: 'bold',
+          }}
+        >
+          Featured Restaurants
+        </Text>
+      </View>
 
       <View>
         <ScrollView horizontal>
@@ -61,6 +65,9 @@ export default function Ordermeal({ navigation }) {
               style={{
                 position: 'absolute',
                 marginLeft: config.deviceWidth * 0.1,
+                width: config.deviceWidth * 0.5,
+                height: config.deviceHeight * 0.2,
+                borderRadius: 12,
                 top: 26,
               }}
               source={require('../assets/BG.jpg')}
@@ -69,10 +76,11 @@ export default function Ordermeal({ navigation }) {
               <Text
                 style={{
                   position: 'absolute',
+
                   height: 24,
                   paddingLeft: config.deviceWidth * 0.1,
                   fontWeight: '500',
-                  marginTop: config.deviceHeight / 4.5,
+                  marginTop: config.deviceHeight / 4,
                   fontSize: 17,
                   letterSpacing: 0.444444,
                   color: ' #010F07',
@@ -83,7 +91,7 @@ export default function Ordermeal({ navigation }) {
               <Text
                 style={{
                   position: 'absolute',
-                  marginTop: config.deviceHeight / 4,
+                  marginTop: config.deviceHeight / 3.5,
                   opacity: 0.64,
                   marginLeft: config.deviceWidth * 0.1,
                   fontSize: 16,
@@ -93,7 +101,7 @@ export default function Ordermeal({ navigation }) {
               </Text>
               <Text
                 style={{
-                  marginTop: config.deviceHeight / 3.5,
+                  marginTop: config.deviceHeight / 3.1,
                   opacity: 0.64,
                   marginLeft: config.deviceWidth * 0.1,
                   fontSize: 14,
@@ -108,7 +116,10 @@ export default function Ordermeal({ navigation }) {
             <Image
               style={{
                 position: 'absolute',
+                borderRadius: 12,
                 marginLeft: config.deviceWidth * 0.1,
+                width: config.deviceWidth * 0.5,
+                height: config.deviceHeight * 0.2,
                 top: 26,
               }}
               source={require('../assets/BG.jpg')}
@@ -117,10 +128,11 @@ export default function Ordermeal({ navigation }) {
               <Text
                 style={{
                   position: 'absolute',
+
                   height: 24,
                   paddingLeft: config.deviceWidth * 0.1,
                   fontWeight: '500',
-                  marginTop: config.deviceHeight / 4.5,
+                  marginTop: config.deviceHeight / 4,
                   fontSize: 17,
                   letterSpacing: 0.444444,
                   color: ' #010F07',
@@ -131,7 +143,7 @@ export default function Ordermeal({ navigation }) {
               <Text
                 style={{
                   position: 'absolute',
-                  marginTop: config.deviceHeight / 4,
+                  marginTop: config.deviceHeight / 3.5,
                   opacity: 0.64,
                   marginLeft: config.deviceWidth * 0.1,
                   fontSize: 16,
@@ -141,7 +153,7 @@ export default function Ordermeal({ navigation }) {
               </Text>
               <Text
                 style={{
-                  marginTop: config.deviceHeight / 3.5,
+                  marginTop: config.deviceHeight / 3.1,
                   opacity: 0.64,
                   marginLeft: config.deviceWidth * 0.1,
                   fontSize: 14,
@@ -156,7 +168,10 @@ export default function Ordermeal({ navigation }) {
             <Image
               style={{
                 position: 'absolute',
+                borderRadius: 12,
                 marginLeft: config.deviceWidth * 0.1,
+                width: config.deviceWidth * 0.5,
+                height: config.deviceHeight * 0.2,
                 top: 26,
               }}
               source={require('../assets/BG.jpg')}
@@ -165,21 +180,22 @@ export default function Ordermeal({ navigation }) {
               <Text
                 style={{
                   position: 'absolute',
+
                   height: 24,
                   paddingLeft: config.deviceWidth * 0.1,
                   fontWeight: '500',
-                  marginTop: config.deviceHeight / 4.5,
+                  marginTop: config.deviceHeight / 4,
                   fontSize: 17,
                   letterSpacing: 0.444444,
                   color: ' #010F07',
                 }}
               >
-                Mario Italiano
+                Daylight Coffee
               </Text>
               <Text
                 style={{
                   position: 'absolute',
-                  marginTop: config.deviceHeight / 4,
+                  marginTop: config.deviceHeight / 3.5,
                   opacity: 0.64,
                   marginLeft: config.deviceWidth * 0.1,
                   fontSize: 16,
@@ -189,7 +205,7 @@ export default function Ordermeal({ navigation }) {
               </Text>
               <Text
                 style={{
-                  marginTop: config.deviceHeight / 3.5,
+                  marginTop: config.deviceHeight / 3.1,
                   opacity: 0.64,
                   marginLeft: config.deviceWidth * 0.1,
                   fontSize: 14,

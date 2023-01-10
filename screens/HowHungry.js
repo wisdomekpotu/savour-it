@@ -84,7 +84,7 @@ export default function HowHungry({ navigation }) {
         <Pressable
           onPress={() => navigation.navigate('Avoiding')}
           style={{
-            backgroundColor: '#1B463C',
+            backgroundColor: '#B9B9B9',
             alignItems: 'center',
             color: '#FFFFFF',
             width: '80%',
