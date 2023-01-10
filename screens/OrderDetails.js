@@ -33,7 +33,7 @@ export default function FancyHaving({ navigation }) {
           }}
           source={require('../assets/order.png')}
         />
-        <View style={{ marginTop: config.deviceHeight / 30.5 }}>
+        <View style={{ marginTop: config.deviceHeight / 16.5 }}>
           <Text
             style={{
               position: 'absolute',
