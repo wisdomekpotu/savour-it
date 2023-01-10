@@ -38,7 +38,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {isFirstLaunch && (
+        {/* modify to manage*/}
+        {!isFirstLaunch && (
           <Stack.Screen
             name='Onboard'
             component={Onboard}
