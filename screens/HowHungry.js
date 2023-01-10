@@ -1,6 +1,6 @@
+import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
 import { View, Text, Pressable } from 'react-native';
-
 import config from '../config';
 
 export default function HowHungry({ navigation }) {
@@ -12,16 +12,50 @@ export default function HowHungry({ navigation }) {
         backgroundColor: '#F4F3E8',
       }}
     >
-      <Text
+      <View style={{ flexDirection: 'row' }}>
+        <Pressable onPress={() => navigation.navigate('Ordermeal')}>
+          <Ionicons
+            name='ios-chevron-back-circle-outline'
+            size={40}
+            color='#1B463C'
+            style={{
+              paddingLeft: config.deviceWidth * 0.1,
+              marginTop: config.deviceHeight / 180,
+              marginBottom: config.deviceHeight / 33,
+            }}
+          />
+        </Pressable>
+        <Pressable onPress={() => navigation.navigate('Avoiding')}>
+          <Text
+            style={{
+              fontSize: 18,
+              paddingLeft: config.deviceWidth * 0.65,
+              marginTop: config.deviceHeight / 60,
+              color: '#1B463C',
+            }}
+          >
+            skip
+          </Text>
+        </Pressable>
+      </View>
+
+      <View
         style={{
-          justifyContent: 'flex-start',
-          fontSize: 35,
-          color: '#1B463C',
+          marginTop: config.deviceHeight / 32,
           paddingLeft: config.deviceWidth * 0.1,
         }}
       >
-        How hungry are {'\n'}you?
-      </Text>
+        <Text
+          style={{
+            justifyContent: 'flex-start',
+            fontSize: 35,
+            color: '#1B463C',
+          }}
+        >
+          How hungry are {'\n'}you?
+        </Text>
+      </View>
+
       <View
         style={{
           width: config.deviceWidth - 60,

@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, Pressable } from 'react-native';
 import config from '../config';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function Avoiding({ navigation }) {
   return (
@@ -11,6 +12,20 @@ export default function Avoiding({ navigation }) {
         backgroundColor: '#F4F3E8',
       }}
     >
+      <View style={{ flexDirection: 'row' }}>
+        <Pressable onPress={() => navigation.navigate('HowHungry')}>
+          <Ionicons
+            name='ios-chevron-back-circle-outline'
+            size={40}
+            color='#1B463C'
+            style={{
+              paddingLeft: config.deviceWidth * 0.1,
+              marginTop: config.deviceHeight / 180,
+              marginBottom: config.deviceHeight / 33,
+            }}
+          />
+        </Pressable>
+      </View>
       <Text
         style={{
           justifyContent: 'flex-start',

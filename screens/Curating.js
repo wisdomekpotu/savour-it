@@ -12,7 +12,6 @@ export default function Curating({ navigation }) {
         backgroundColor: '#1B463C',
       }}
     >
-      <Ionicons name='md-arrow-back-circle-outline' size={24} color='white' />
       <Pressable onPress={() => navigation.navigate('MealOptions')}>
         <Lottie
           style={{
