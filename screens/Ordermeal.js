@@ -118,7 +118,6 @@ export default function Ordermeal({ navigation }) {
               <Text
                 style={{
                   position: 'absolute',
-
                   height: 24,
                   paddingLeft: config.deviceWidth * 0.1,
                   fontWeight: '500',

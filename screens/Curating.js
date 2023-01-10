@@ -1,4 +1,4 @@
-import { Text, View, Pressable } from 'react-native';
+import { Text, View, Pressable, Image } from 'react-native';
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
 import Lottie from 'lottie-react-native';
 import config from '../config';
@@ -12,6 +12,14 @@ export default function Curating({ navigation }) {
         backgroundColor: '#1B463C',
       }}
     >
+      <Image
+        style={{
+          position: 'absolute',
+          marginTop: config.deviceHeight / 9,
+          marginLeft: config.deviceWidth * 0.32,
+        }}
+        source={require('../assets/Group2.png')}
+      />
       <Pressable onPress={() => navigation.navigate('MealOptions')}>
         <Lottie
           style={{

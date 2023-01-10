@@ -30,177 +30,62 @@ export default function MealOptions({ navigation }) {
           fontSize: 20,
           color: '#1B463C',
           marginTop: config.deviceHeight / 5,
+          borderRadius: 1,
           paddingLeft: config.deviceWidth * 0.1,
         }}
       >
         Here are some meal{'\n'} options for you
       </Text>
-      <Pressable
-        style={styles.press2}
-        onPress={() => navigation.navigate('OrderDetails')}
-      >
-        <Image
-          style={{
-            position: 'absolute',
-            marginLeft: config.deviceWidth * 0.1,
-            top: 26,
-            bottom: 34.4,
-          }}
-          source={require('../assets/BG1.png')}
-        />
-        <View>
-          <Text
+      <View>
+        <Pressable
+          style={styles.press2}
+          onPress={() => navigation.navigate('OrderDetails')}
+        >
+          <Image
             style={{
               position: 'absolute',
-              height: 24,
-              paddingLeft: config.deviceWidth * 0.1,
+              marginLeft: config.deviceWidth * 0.1,
+              top: 26,
+            }}
+            source={require('../assets/BG1.png')}
+          />
+          <View
+            style={{
+              marginTop: config.deviceHeight / 5,
+              width: config.deviceWidth * 0.94,
+              backgroundColor: 'white',
+              marginLeft: config.deviceWidth * 0.1,
+              marginBottom: config.deviceHeight / 13,
 
-              fontWeight: '500',
-              top: 220,
-              fontSize: 17,
-              lineHeight: 24,
-              letterSpacing: 0.444444,
-              color: ' #010F07',
+              top: 22,
             }}
           >
-            Vegetarian salad
-          </Text>
-          <Text
-            style={{
-              marginTop: config.deviceHeight / 3.6,
-              opacity: 0.64,
-              marginLeft: config.deviceWidth * 0.1,
-              fontSize: 16,
-            }}
-          >
-            $$ * Regular * Halal
-          </Text>
-        </View>
-      </Pressable>
-      <Pressable
-        style={styles.press2}
-        onPress={() => navigation.navigate('OrderDetails')}
-      >
-        <Image
-          style={{
-            position: 'absolute',
-            marginLeft: config.deviceWidth * 0.1,
+            <Text
+              style={{
+                position: 'absolute',
+                height: 24,
+                fontWeight: '500',
+                fontSize: 17,
+                lineHeight: 24,
+                letterSpacing: 0.444444,
+                color: ' #010F07',
+              }}
+            >
+              Vegetarian salad
+            </Text>
+            <Text
+              style={{
+                marginTop: config.deviceHeight / 20,
+                opacity: 0.64,
 
-            top: 26,
-            bottom: 34.4,
-          }}
-          source={require('../assets/BG1.png')}
-        />
-        <View>
-          <Text
-            style={{
-              position: 'absolute',
-              height: 24,
-              paddingLeft: config.deviceWidth * 0.1,
-              fontWeight: '500',
-              top: 220,
-              fontSize: 17,
-              lineHeight: 24,
-              letterSpacing: 0.444444,
-              color: ' #010F07',
-            }}
-          >
-            Vegetarian salad
-          </Text>
-          <Text
-            style={{
-              marginTop: config.deviceHeight / 3.6,
-              opacity: 0.64,
-              marginLeft: config.deviceWidth * 0.1,
-              fontSize: 16,
-            }}
-          >
-            $$ * Regular * Halal
-          </Text>
-        </View>
-      </Pressable>
-      <Pressable
-        style={styles.press2}
-        onPress={() => navigation.navigate('OrderDetails')}
-      >
-        <Image
-          style={{
-            position: 'absolute',
-            marginLeft: config.deviceWidth * 0.1,
-            top: 26,
-            bottom: 34.4,
-          }}
-          source={require('../assets/BG1.png')}
-        />
-        <View>
-          <Text
-            style={{
-              position: 'absolute',
-              height: 24,
-              paddingLeft: config.deviceWidth * 0.1,
-              fontWeight: '500',
-              top: 220,
-              fontSize: 17,
-              lineHeight: 24,
-              letterSpacing: 0.444444,
-              color: ' #010F07',
-            }}
-          >
-            Vegetarian salad
-          </Text>
-          <Text
-            style={{
-              marginTop: config.deviceHeight / 3.6,
-              opacity: 0.64,
-              marginLeft: config.deviceWidth * 0.1,
-              fontSize: 16,
-            }}
-          >
-            $$ * Regular * Halal
-          </Text>
-        </View>
-      </Pressable>
-      <Pressable
-        style={styles.press2}
-        onPress={() => navigation.navigate('OrderDetails')}
-      >
-        <Image
-          style={{
-            position: 'absolute',
-            marginLeft: config.deviceWidth * 0.1,
-            top: 26,
-            bottom: 34.4,
-          }}
-          source={require('../assets/BG1.png')}
-        />
-        <View>
-          <Text
-            style={{
-              position: 'absolute',
-              height: 24,
-              paddingLeft: config.deviceWidth * 0.1,
-              fontWeight: '500',
-              top: 220,
-              fontSize: 17,
-              lineHeight: 24,
-              letterSpacing: 0.444444,
-              color: ' #010F07',
-            }}
-          >
-            Vegetarian salad
-          </Text>
-          <Text
-            style={{
-              marginTop: config.deviceHeight / 3.6,
-              opacity: 0.64,
-              marginLeft: config.deviceWidth * 0.1,
-              fontSize: 16,
-            }}
-          >
-            $$ * Regular * Halal
-          </Text>
-        </View>
-      </Pressable>
+                fontSize: 16,
+              }}
+            >
+              $$ * Regular * Halal
+            </Text>
+          </View>
+        </Pressable>
+      </View>
     </ScrollView>
   );
 }
