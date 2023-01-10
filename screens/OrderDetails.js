@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import config from '../config';
+import { Ionicons, SimpleLineIcons } from '@expo/vector-icons';
 
 export default function FancyHaving({ navigation }) {
   return (
@@ -32,28 +33,28 @@ export default function FancyHaving({ navigation }) {
           }}
           source={require('../assets/order.png')}
         />
-        <View>
+        <View style={{ marginTop: config.deviceHeight / 30.5 }}>
           <Text
             style={{
               position: 'absolute',
               height: 24,
               paddingLeft: config.deviceWidth * 0.1,
               fontWeight: '500',
-              marginTop: config.deviceHeight / 2.2,
+              marginTop: config.deviceHeight / 2.5,
               fontSize: 24,
               lineHeight: 24,
               letterSpacing: 0.444444,
-              color: ' #010F07',
+              color: '#010F07',
             }}
           >
             Cookie Sandwich
           </Text>
           <Text
             style={{
-              marginTop: config.deviceHeight / 2.0,
+              marginTop: config.deviceHeight / 2.3,
               marginLeft: config.deviceWidth * 0.1,
               opacity: 0.64,
-              fontSize: 18,
+              fontSize: 16,
             }}
           >
             Shortbread, chocolate turtle cookies, and {'\n'}red velvet. 8 ounces
@@ -64,48 +65,108 @@ export default function FancyHaving({ navigation }) {
               opacity: 0.64,
               marginLeft: config.deviceWidth * 0.1,
               marginTop: 15,
-              fontSize: 16,
+              fontSize: 15,
+              color: '#868686',
             }}
           >
-            $$ * Regular * Halal
+            $$ * Chinese * American * Deshi food
           </Text>
         </View>
       </Pressable>
-      <Pressable onPress={() => navigation.navigate('Budget')}>
-        <Text
+
+      <Ionicons
+        style={{
+          position: 'absolute',
+          marginTop: config.deviceHeight / 9,
+          marginLeft: config.deviceWidth * 0.04,
+        }}
+        name='ios-close-circle'
+        size={35}
+        color='black'
+      />
+
+      <View>
+        <Image
           style={{
             position: 'absolute',
-            marginLeft: config.deviceWidth * 0.45,
-            marginTop: config.deviceHeight / 9,
-            fontWeight: '500',
-            fontSize: 15,
-            lineHeight: 26,
+            width: '80%',
+            alignSelf: 'center',
+            marginTop: config.deviceHeight / 35,
+          }}
+          source={require('../assets/Rectangle.png')}
+        />
+      </View>
+
+      <View style={{ flexDirection: 'row' }}>
+        <Text
+          style={{
+            fontSize: '16',
+            paddingLeft: config.deviceWidth * 0.1,
+            marginTop: config.deviceHeight / 17,
+            marginBottom: config.deviceHeight / 60,
+          }}
+        >
+          Quality
+        </Text>
+
+        <Pressable onPress={() => navigation.navigate('Avoiding')}>
+          <Text
+            style={{
+              fontSize: 18,
+              paddingLeft: config.deviceWidth * 0.65,
+              marginTop: config.deviceHeight / 17,
+              color: '#1B463C',
+            }}
+          >
+            1
+          </Text>
+        </Pressable>
+      </View>
+      <View>
+        <Image
+          style={{
+            position: 'absolute',
+            width: '80%',
+            alignSelf: 'center',
+            marginTop: config.deviceHeight / 35,
+          }}
+          source={require('../assets/Rectangle.png')}
+        />
+      </View>
+      <View style={{ flexDirection: 'row' }}>
+        <Text
+          style={{
+            fontSize: '16',
+            paddingLeft: config.deviceWidth * 0.1,
+            marginTop: config.deviceHeight / 17,
+            marginBottom: config.deviceHeight / 60,
+          }}
+        >
+          Price
+        </Text>
+
+        <Text
+          style={{
+            fontSize: 18,
+            paddingLeft: config.deviceWidth * 0.65,
+            marginTop: config.deviceHeight / 17,
             color: '#1B463C',
           }}
         >
-          Cookie Sandwish
+          $29.4
         </Text>
-        <Text
+      </View>
+      <View>
+        <Image
           style={{
-            marginTop: config.deviceHeight / 6,
-            marginLeft: config.deviceWidth * 0.1,
-            opacity: 0.64,
-            fontSize: 13,
+            position: 'absolute',
+            width: '80%',
+            alignSelf: 'center',
+            marginTop: config.deviceHeight / 35,
           }}
-        >
-          Shortbread, chocolate turtle {'\n'}cookies, and red velvet.
-        </Text>
-        <Text
-          style={{
-            marginTop: config.deviceHeight / 60,
-            opacity: 0.64,
-            marginLeft: config.deviceWidth * 0.1,
-            fontSize: 16,
-          }}
-        >
-          $$ * Regular
-        </Text>
-      </Pressable>
+          source={require('../assets/Rectangle.png')}
+        />
+      </View>
       <View
         style={{
           alignItems: 'center',
@@ -121,7 +182,7 @@ export default function FancyHaving({ navigation }) {
             height: 50,
             justifyContent: 'center',
             borderRadius: 25,
-            marginTop: config.deviceHeight / 4,
+            marginTop: config.deviceHeight / 8,
           }}
         >
           <Text style={{ color: '#FFFFFF' }}>Continue to Uber Eats</Text>
