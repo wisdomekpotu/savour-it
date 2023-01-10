@@ -1,6 +1,14 @@
-import { Pressable, StyleSheet, Text, Image, ScrollView } from 'react-native';
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  Image,
+  ScrollView,
+  View,
+} from 'react-native';
 import React from 'react';
 import config from '../config';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function MealOptions({ navigation }) {
   return (
@@ -11,6 +19,21 @@ export default function MealOptions({ navigation }) {
         backgroundColor: '#F4F3E8',
       }}
     >
+      <View style={{ flexDirection: 'row' }}>
+        <Pressable onPress={() => navigation.navigate('OrderDetails')}>
+          <Ionicons
+            name='ios-chevron-back-circle-outline'
+            size={40}
+            color='#1B463C'
+            style={{
+              paddingLeft: config.deviceWidth * 0.1,
+              marginTop: config.deviceHeight / 18,
+              marginBottom: config.deviceHeight / 33,
+            }}
+          />
+        </Pressable>
+      </View>
+
       <Image
         style={{
           position: 'absolute',
@@ -23,7 +46,7 @@ export default function MealOptions({ navigation }) {
         style={{
           fontSize: 20,
           color: '#1B463C',
-          marginTop: config.deviceHeight / 5,
+          marginTop: config.deviceHeight / 8,
           paddingLeft: config.deviceWidth * 0.18,
         }}
       >
