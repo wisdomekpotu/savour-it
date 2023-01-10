@@ -26,7 +26,7 @@ export default function Curating({ navigation }) {
             width: config.deviceWidth - 60,
             alignSelf: 'center',
 
-            marginTop: config.deviceHeight / 16,
+            marginTop: config.deviceHeight / 12,
           }}
           source={require('../animations/meal_loading.json')}
           autoPlay

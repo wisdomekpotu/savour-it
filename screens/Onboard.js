@@ -2,6 +2,7 @@ import { Image } from 'react-native';
 import Onboarding from 'react-native-onboarding-swiper';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
+import config from '../config';
 
 export default function Onboard() {
   const navigation = useNavigation();
@@ -13,6 +14,7 @@ export default function Onboard() {
       pages={[
         {
           backgroundColor: '#F4F3E8',
+          marginLeft: config.deviceWidth * 0.3,
           image: <Image source={require('../assets/onboard/first.png')} />,
           title: 'Save time on meal selection',
           subtitle:
