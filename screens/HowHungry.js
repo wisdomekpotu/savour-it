@@ -1,9 +1,33 @@
 import { Ionicons } from '@expo/vector-icons';
-import React from 'react';
-import { View, Text, Pressable } from 'react-native';
+import React, { useEffect, useRef, useState } from 'react';
+import { View, Text, Pressable, Button } from 'react-native';
 import config from '../config';
 
+import { fetchHungers } from '../endpoints/hungers';
+
 export default function HowHungry({ navigation }) {
+  const [hungers, setHungers] = useState([]);
+
+  async function fetchHungersFromApi() {
+    const { data } = await fetchHungers();
+    setHungers(data);
+    console.log(data.i);
+  }
+
+  useEffect(() => {
+    fetchHungersFromApi();
+  }, []);
+
+  // const [name, setName] = useState('');
+
+  // // Creating a ref Object using useRef Hook
+  // const textRef = useRef(null);
+
+  // const onPressFunction = () => {
+  //   const el2 = textRef.current;
+  //   console.log(el2);
+  // };
+
   return (
     <View
       style={{
@@ -45,7 +69,7 @@ export default function HowHungry({ navigation }) {
           paddingLeft: config.deviceWidth * 0.1,
         }}
       >
-        <Text
+        {/* <Text
           style={{
             justifyContent: 'flex-start',
             fontSize: 35,
@@ -53,7 +77,7 @@ export default function HowHungry({ navigation }) {
           }}
         >
           How hungry are {'\n'}you?
-        </Text>
+        </Text> */}
       </View>
 
       <View
@@ -66,6 +90,8 @@ export default function HowHungry({ navigation }) {
         }}
       >
         <Pressable
+          // onPress={() => onPressFunction()}
+          onPress={() => onPressFunction()}
           style={{
             backgroundColor: '#D9E7E4',
             marginTop: config.deviceHeight / 16,
@@ -77,10 +103,10 @@ export default function HowHungry({ navigation }) {
             marginBottom: config.deviceHeight / 33,
           }}
         >
-          <Text style={{ color: '#1B463C' }}>Very Hungry</Text>
+          <Text style={{ color: '#1B463C' }}>{}</Text>
         </Pressable>
 
-        <Pressable
+        {/* <Pressable
           style={{
             backgroundColor: '#D9E7E4',
             alignItems: 'center',
@@ -107,10 +133,10 @@ export default function HowHungry({ navigation }) {
           }}
         >
           <Text>Hungry</Text>
-        </Pressable>
+        </Pressable> */}
       </View>
 
-      <View
+      {/* <View
         style={{
           alignItems: 'center',
         }}
@@ -129,7 +155,7 @@ export default function HowHungry({ navigation }) {
         >
           <Text style={{ color: '#FFFFFF' }}>Continue</Text>
         </Pressable>
-      </View>
+      </View> */}
     </View>
   );
 }
